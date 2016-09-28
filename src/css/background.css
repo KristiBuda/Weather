@@ -1,0 +1,6 @@
+.buda-jumbotron{
+  background: url('/images/clear-sky.jpg') no-repeat center;
+  background-size: cover;
+  border: none;
+  height: 100vh;
+}

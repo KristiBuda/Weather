@@ -21,23 +21,27 @@ class SearchBar extends Component{
   onInputChange(event){
     this.setState({term: event.target.value});
   }
-
-
   render(){
     return(
-      <form onSubmit={this.onFormSubmit} className="input-group">
-        <input
-          placeholder="Search a city"
-          className="form-control"
-          value={this.state.term}
-          onChange={this.onInputChange}
-        />
-        <span className="input-group-btn">
-          <button type="submit" className="btn btn-default">Submit</button>
-        </span>
-      </form>
-    );
+      <div class="container">
+        <div class="row">
+        <div class="col-md-4 col-md-offset-3">
+            <form onSubmit={this.onFormSubmit} class="search-form">
+                <div class="form-group has-feedback">
+            		  <label for="search" class="sr-only">Search</label>
+                  <input placeholder="Search a city" className="form-control" name="search" id="search"
+                    value={this.state.term}
+                    onChange={this.onInputChange}
+                  />
+              		<span class="glyphicon glyphicon-search form-control-feedback"></span>
+            	  </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    )
   }
+
 }
 
 function mapDispatchToProps(dispatch){

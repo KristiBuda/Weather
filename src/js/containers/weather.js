@@ -14,16 +14,16 @@ class Weather extends Component{
         <i className="fa fa-chevron-down fa-4x" aria-hidden="true"></i>
       </div>
     );
-
   }
+
+  
+
 
   render(){
     return(
-      <div  className="container">
         <div className="text-center">
           {this.props.weather.map(this.renderCurrentTemperature)}
         </div>
-      </div>
     );
   }
 }
