@@ -1,5 +1,23 @@
 .buda-weatherdata{
-  margin-top: 25%;
   font-family: 'Gochi Hand', cursive;
   color: white;
+}
+
+.fade-enter{
+  right: 100px
+  opacity 0;
+}
+.fade-enter-active{
+  right: 0px;
+  opacity: 1.0;
+  transition: .5s ease-in all;
+}
+
+.fade-enter{
+  right: 100px;
+}
+
+.fade-enter-active{
+  right: 0px;
+  transition: .5s ease-in all;
 }

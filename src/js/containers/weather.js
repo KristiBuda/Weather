@@ -8,21 +8,18 @@ class Weather extends Component{
     const cityName = `${Data.city.name}, ${Data.city.country}`;
     const currentTemp = Math.round(Data.list[0].main.temp- 273.15);
     return(
+
       <div key={key}>
-        <h1>{cityName}</h1>
-        <h1>{currentTemp}&deg;C</h1>
-        <i className="fa fa-chevron-down fa-4x" aria-hidden="true"></i>
+          <h1>{cityName}</h1>
+          <h1>{currentTemp}&deg;C</h1>
       </div>
     );
   }
 
-  
-
-
   render(){
     return(
         <div className="text-center">
-          {this.props.weather.map(this.renderCurrentTemperature)}
+            {this.props.weather.map(this.renderCurrentTemperature)}
         </div>
     );
   }
