@@ -7,11 +7,13 @@ class Weather extends Component{
     const key = Data.city.id;
     const cityName = `${Data.city.name}, ${Data.city.country}`;
     const currentTemp = Math.round(Data.list[0].main.temp- 273.15);
+    const currentDec = Data.list[0].weather[0].description;
     return(
 
       <div key={key}>
           <h1>{cityName}</h1>
           <h1>{currentTemp}&deg;C</h1>
+          <h1>{currentDec}</h1>
       </div>
     );
   }
